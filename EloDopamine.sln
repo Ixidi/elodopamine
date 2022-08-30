@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EloDopamine.Api", "EloDopamine.Api\EloDopamine.Api.csproj", "{D1AFFC46-1614-4619-AA55-CAE295D604CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EloDopamine.Application", "EloDopamine.Application\EloDopamine.Application.csproj", "{40414A63-EDDF-4484-BC3C-AA8D84889803}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1AFFC46-1614-4619-AA55-CAE295D604CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AFFC46-1614-4619-AA55-CAE295D604CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AFFC46-1614-4619-AA55-CAE295D604CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AFFC46-1614-4619-AA55-CAE295D604CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40414A63-EDDF-4484-BC3C-AA8D84889803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40414A63-EDDF-4484-BC3C-AA8D84889803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40414A63-EDDF-4484-BC3C-AA8D84889803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40414A63-EDDF-4484-BC3C-AA8D84889803}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
