@@ -3,6 +3,6 @@ namespace EloDopamine.Application;
 public interface ILogger
 {
 
-    void Info(string message);
+    void Info(object any);
 
 }

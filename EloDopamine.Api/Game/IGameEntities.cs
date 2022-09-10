@@ -1,8 +1,7 @@
-namespace EloDopamine.Api.Game;
+﻿namespace EloDopamine.Api.Game;
 
-public interface IGameManager
+public interface IGameEntities
 {
-    IGame Game { get; }
     IHero LocalPlayer { get; }
     IEnumerable<IHero> Heroes { get; }
     IEnumerable<IMinion> AllyMinion { get; }

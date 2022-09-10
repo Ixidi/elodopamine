@@ -12,5 +12,5 @@ public interface IPlugin
     void OnPluginRegister(IPluginRegistration registration);
     void OnPluginEnable();
     void OnPluginDisable();
-    void OnFrameUpdate(IDrawer drawer, IGameManager gameManager);
+    void OnFrameUpdate(IDrawer drawer, IGame game);
 }
