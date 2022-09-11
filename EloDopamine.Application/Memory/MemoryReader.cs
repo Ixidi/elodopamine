@@ -27,26 +27,25 @@ public class MemoryReader : BaseReader, IMemoryReader
 
 	public string ReadString(int offset)
 	{
-		//DO NOT TOUCH IT!!! it works idk how idk why
-		ArraySegment<byte> bytes;
-		if (ReadInt(offset + 20) == 15)
+		/*
+		 * Less ghetto but still idk its fucking stupid. May throw exception in future
+		 */
+		
+		var len = ReadInt(offset + 16); // normal string is usually 16 bytes of non-pointer so offset + 16 = length
+		int address;
+		
+		if (len is < 1 or > 200) // if length is 0 or > 200 it means this value is not actual string length
 		{
-			var l = ReadInt(offset + 16);
-			bytes = Segment(offset, l);
+			len = ReadInt(offset + 4); // offset + 4 = length of char map
+			address = ReadInt(offset); // actual char map
 		}
 		else
 		{
-
-			var stringAddress = ReadInt(offset);
-			var l = ReadInt(offset + 16);
-			if (l == 0)
-			{
-				l = ReadInt(offset + 4);
-			}
-			
-			bytes = Segment(stringAddress, l);
+			address = len >= 16 ? ReadInt(offset) : offset;
 		}
 		
-		return Encoding.UTF8.GetString(bytes);
+		var bytes = ReadBytes(address, len);
+
+		return Encoding.ASCII.GetString(bytes);
 	}
 }

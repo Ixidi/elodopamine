@@ -7,6 +7,7 @@ public interface IReader
 
     float ReadFloat(int offset);
     int ReadInt(int offset);
+    long ReadLong(int offset);
     bool ReadBool(int offset);
     byte ReadByte(int offset);
 

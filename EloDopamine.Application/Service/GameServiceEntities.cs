@@ -29,7 +29,7 @@ public partial class GameService
 		var lvl = buff.ReadInt(Offsets.SpellLevel);
 		var spellInfo = buff.ReadInt(Offsets.SpellInfo);
 		var spellName = _memoryReader.ReadString(spellInfo + Offsets.SpellName);
-
+		Console.WriteLine(spellName);
 		return new Spell(
 			name: spellName,
 			readyAt: readyAt,

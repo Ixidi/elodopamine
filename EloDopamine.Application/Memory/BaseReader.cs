@@ -14,6 +14,11 @@ public abstract class BaseReader : IReader
         return BitConverter.ToInt32(Segment(offset, 4));
     }
 
+    public long ReadLong(int offset)
+    {
+        return BitConverter.ToInt64(Segment(offset, 8));
+    }
+    
     public bool ReadBool(int offset)
     {
         return BitConverter.ToBoolean(Segment(offset, 1));
