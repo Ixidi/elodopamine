@@ -1,16 +1,7 @@
 namespace EloDopamine.Api.Math;
 
-public class Vector2 : IVector2
+public record Vector2(float X, float Y) : IVector2
 {
-    public Vector2(float x, float y)
-    {
-        X = x;
-        Y = y;
-    }
-
-    public float X { get; }
-    public float Y { get; }
-
     public float Length()
     {
         return Convert.ToSingle(System.Math.Sqrt(X * X + Y * Y));

@@ -11,4 +11,8 @@
       <ProjectReference Include="..\EloDopamine.Api\EloDopamine.Api.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="log4net" Version="2.0.15" />
+    </ItemGroup>
+
 </Project>

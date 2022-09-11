@@ -1,18 +1,7 @@
 namespace EloDopamine.Api.Math;
 
-public class Vector3 : IVector3
+public record Vector3(float X, float Y, float Z) : IVector3
 {
-    public Vector3(float x, float y, float z)
-    {
-        X = x;
-        Y = y;
-        Z = z;
-    }
-
-    public float X { get; }
-    public float Y { get; }
-    public float Z { get; }
-
     public float Length()
     {
         return Convert.ToSingle(System.Math.Sqrt(X * X + Y * Y + Z * Z));
